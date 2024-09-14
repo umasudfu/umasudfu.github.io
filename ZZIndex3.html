@@ -1,0 +1,68 @@
+<meta charset="UTF-8">
+<head>
+  <title>ٻعَبًىًمَّ</title>
+  <b>Lone, Tyler, The Creator :ݜعُّشخّڱً</b>
+</head>
+<body>
+  <p><a href="ZZ1.html"><i>ىِمعُپُ تًبَ؟</i></a></p>
+  <audio src="songs/Lone.mp3" autoplay loop></audio>
+  <video src="videos/7284877533248523525_no_watermark.mp4.mov" width="300" height="300" controls></video>
+  <video src="videos/9c0dc3572837bb57e643e83c417e92f5.mp4" width="300" height="300" controls></video>
+  <video src="videos/Arthur_Morgan_why_tf_do_my_dog_walk_sideways_boah.mp4" width="300" height="300" controls></video>
+  <video src="videos/cat_bang_wall.mp4" width="300" height="300" controls></video>
+  <video src="videos/chinese_cat.mp4" width="300" height="300" controls></video>
+  <video src="videos/doublelife.mp4" width="300" height="300" controls></video>
+  <video src="videos/Luff.mp4" width="300" height="300" controls></video>
+  <video src="videos/observe_boykisser_pan.mp4.mp4.mp4.mp4" width="300" height="300" controls></video>
+  <video src="videos/RDT_20240505_232513.mp4" width="300" height="300" controls></video>
+  <video src="videos/roland_1_1.mp4" width="300" height="300" controls></video>
+  <video src="videos/speed tweak.mp4" width="300" height="300" controls></video>
+  <video src="videos/undefined.mp4" width="300" height="300" controls></video>
+  <video src="videos/video0 (2).mp4" width="300" height="300" controls></video>
+  <video src="videos/video0_1.mp4" width="300" height="300" controls></video>
+  <video src="videos/youre_doin_good_lad.mp4" width="300" height="300" controls></video>
+  <video src="videos/your_final_challenge_let_yo_bih_go_through_your_phone.mp4" width="300" height="300" controls></video>
+
+  <script>
+	const audio = document.querySelector('audio');
+	const videos = document.querySelectorAll('video');
+  
+	videos.forEach(video => {
+	  video.addEventListener('play', () => {
+		audio.pause();
+	  });
+	  
+	  video.addEventListener('pause', () => {
+		audio.play();
+	  });
+  
+	  video.addEventListener('ended', () => {
+		audio.play();
+	  });
+	});
+  </script>
+  
+  <style>
+    body {
+      background-image: linear-gradient(black, rgb(74, 5, 5));
+      padding: 64px;
+      text-align: center;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    p {
+      font-family: Segoe UI;
+      font-size: 34px;
+      color: black;
+    }
+    b {
+      font-size: 15px;
+      color: grey;
+      text-align:end;
+    }
+  </style>
+</body>
