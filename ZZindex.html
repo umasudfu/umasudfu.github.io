@@ -2,6 +2,10 @@
 <head>
     <title>:3</title>
     <style>
+            @font-face {
+      font-family: 'Scheherazade New';
+      src: url(ScheherazadeNew-Regular.ttf);
+    }
         body, html {
             margin: 0;
             padding: 0;
@@ -11,6 +15,7 @@
             align-items: center;
             background-color: #282c34;
             color: white;
+            font-family: "Scheherazade New";
         }
 
         .loading-screen {
@@ -27,7 +32,6 @@
         p {
             font-size: 1.2rem;
             margin-top: 0;
-            font-family: Segoe UI;
         }
 
         @keyframes fadeOut {
@@ -44,7 +48,7 @@
     <div class="loading-screen">
         <h1>...حْݜَّ</h1>
         <img id="randomImage" src="Loadingscreen_images/" width="300" height="300">
-                <p>(کًّۑعِ ںّتىِ ثِشنعُشنَّ حْ سنعُݜّشّ حْݜَّ ضُشعْتخّ, شنّٺّىّ حعْيَّ کًّۑعِ تّْںَۑً مًۑعُ يِٻعَصَ سخعَسخُ)</p>
+                <p>(کؕۑعِ ںّتىِ ثِشنعُشنَّ حْ سنعُݜّشّ حْݜَّ ضُشعْتخّ, شنّٺّىّ حعْيَّ کؕۑعِ تّْںَۑً مًۑعُ يِٻعَصَ سخعَسخُ)</p>
 <script>
     const jsonFilePath = 'image_files.json';
 
@@ -70,7 +74,7 @@
 
     setTimeout(function() {
     window.location.href = 'ZZindex0.html';
-}, Math.random() * (8000 - 3000) + 3000);
+}, Math.random() * (5000 - 3000) + 3000);
 </script>
 
 </body>

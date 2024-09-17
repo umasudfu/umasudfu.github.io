@@ -1,0 +1,81 @@
+<meta charset="UTF-8">
+<head>
+    <title>:3</title>
+    <style>
+        @font-face {
+  font-family: 'Scheherazade New';
+  src: url(ScheherazadeNew-Regular.ttf);
+}
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #282c34;
+        color: white;
+        font-family: "Scheherazade New";
+    }
+
+    .loading-screen {
+        opacity: 1;
+        text-align: center;
+        animation: fadeOut 2s forwards 3s;
+    }
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 0;
+    }
+
+    p {
+        font-size: 1.2rem;
+        margin-top: 0;
+    }
+
+    @keyframes fadeOut {
+        from { opacity: 1; }
+        to { opacity: 0; }
+    }
+
+    .hidden {
+        display: none;
+    }
+</style>
+</head>
+<body>
+    <div class="loading-screen">
+        <h1>...حْݜَّ</h1>
+        <img id="randomImage" src="Loadingscreen_images/" width="300" height="300">
+        <p>(کؕۑعِ ںّتىِ ثِشنعُشنَّ حْ سنعُݜّشّ حْݜَّ ضُشعْتخّ, شنّٺّىّ حعْيَّ کؕۑعِ تّْںَۑً مًۑعُ يِٻعَصَ سخعَسخُ)</p>
+<script>
+    const jsonFilePath = 'image_files.json';
+
+    function loadRandomImage() {
+        fetch(jsonFilePath)
+            .then(response => response.json())
+            .then(imageFiles => {
+                if (imageFiles.length > 0) {
+                    const randomIndex = Math.floor(Math.random() * imageFiles.length);
+                    const randomImage = imageFiles[randomIndex];
+
+                    document.getElementById('randomImage').src = `Loadingscreen_images/${randomImage}`;
+                } else {
+                    console.error('No images found in the JSON file.');
+                }
+            })
+            .catch(error => {
+                console.error('Error loading JSON file:', error);
+            });
+    }
+
+    document.addEventListener('DOMContentLoaded', loadRandomImage);
+
+    setTimeout(function() {
+    window.location.href = 'ZZindex3.html';
+}, Math.random() * (5000 - 3000) + 3000);
+</script>
+
+</body>
+</html>
