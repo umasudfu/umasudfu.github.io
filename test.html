@@ -1,68 +1,106 @@
-<meta charset="UTF-8">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Silly Willy Website :3</title>
-  <audio src="songs/Kether battle 3.mp3" autoplay loop preload="auto"></audio>
-  <style>
-    @font-face {
-      font-family: 'Scheherazade New';
-      src: url(ScheherazadeNew-Regular.ttf);
-    }
-    body {
-      opacity: 0;
-      animation: fadeIn 2s forwards;
-      background-image: linear-gradient(black, rgb(74, 5, 5));
-      padding: 64px;
-      text-align: center;
-      font-family: Segoe UI;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    p, i {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silly Willy Website :3</title>
+    <audio src="songs/Kether battle 3.mp3" autoplay loop preload="auto"></audio>
+    <style>
+        @font-face {
+            font-family: 'Scheherazade New';
+            src: url(ScheherazadeNew-Regular.ttf);
+        }
+        body {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            background-image: linear-gradient(black, rgb(74, 5, 5));
+            padding: 64px;
+            text-align: center;
+            font-family: Segoe UI;
+            transition: margin-left 0.3s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        p {
       font-size: 34px;
       color: grey;
+    }
+    i {
+      font-size: 34px;
+      color: grey;
+      font-family: "Scheherazade New";
     }
     b {
       font-size: 15px;
       color: grey;
       text-align:end;
     }
-    .navbar {
-      display: flex;
-      justify-content: center;
-      background-color: #212121;
-      padding: 10px;
-    }
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-    }
-    .nav-links a:hover {
-      color: #ffcc00;
-    }
-  </style>
+        .sidebar {
+            height: 100%;
+            width: 200x;
+            position: fixed;
+            top: 0;
+            left: -400px; /* Hide sidebar initially */
+            background-image: linear-gradient(black, rgb(74, 5, 5));
+            overflow-x: hidden;
+            transition: left 0.3s;
+            padding: 20px;
+        }
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: grey;
+        }
+        .sidebar h2 {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: grey;
+        }
+        .toggle-btn {
+            position: fixed;
+            left: 20px;
+            top: 20px;
+            background: grey;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 200px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <nav class="navbar">
-    <ul class="nav-links">
-      <li><a href="1.html">Archives</a></li>
-      <li><a href="ZZindex.html">ٻًضعَّ ڳّْکنّڳُ يِٻعَصَ شنُکؕ</a></li>
-    </ul>
-  </nav>
-  <p><i>⚠️Silly goober alert⚠️</i></p>
-  <img src="images/zuka-phighting-rocket-phighting.gif" width="500" height="500">
-  <p><i>Hi there!ヾ(≧▽≦*)o</i></p>
-  <p><i>I'm just going to put some random memes and videos I stole from Discord. I just felt like making some website for fun (^人^)</i></p>
-  <p><i>My main Discord account is qdxhktgi</i></p>
-  <img src="images/Goofy_Ahh (13).png" width="250" height="250">
-  <b>Music: Kether battle 3 · Library Of Ruina</b>
+    <button class="toggle-btn" onclick="toggleSidebar()">:3</button>
+    <div class="sidebar" id="sidebar">
+        <h2> <a href="1.html">Archives</a></h2>
+        <h2> <a href="ZZindex.html">ٻًضعَّ ڳّْکنّڳُ يِٻعَصَ شنُکؕ</a></h2>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            if (sidebar.style.left === '0px') {
+                sidebar.style.left = '-350px'; // Hide sidebar
+            } else {
+                sidebar.style.left = '0px'; // Show sidebar
+            }
+        }
+    </script>
+
+    <p><i>⚠️Silly goober alert⚠️</i></p>
+    <img src="images/zuka-phighting-rocket-phighting.gif" width="500" height="500">
+    <p><i>Hi there!ヾ(≧▽≦*)o</i></p>
+    <p><i>I'm just going to put some random memes and videos I stole from Discord. I just felt like making some website for fun (^人^)</i></p>
+    <p><i>My main Discord account is qdxhktgi</i></p>
+    <b>Music: Kether battle 3 · Library Of Ruina</b>
 </body>
+</html>
