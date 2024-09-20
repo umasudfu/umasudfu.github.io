@@ -1,10 +1,105 @@
 <meta charset="UTF-8">
 <head>
-	<title>Videos</title>
+	<title>Things I made</title>
 	<b>Music: PartyIsntOver (Instrumental) · Tyler, The Creator</b>
   </head>
+  <style>
+	@font-face {
+		font-family: 'Scheherazade New';
+		src: url(ScheherazadeNew-Regular.ttf);
+	}
+	body {
+		opacity: 0;
+		animation: fadeIn 2s forwards;
+		background-image: linear-gradient(black, rgb(74, 5, 5));
+		padding: 64px;
+		text-align: center;
+		font-family: "Scheherazade New";
+		transition: margin-left 0.3s;
+	}
+	@keyframes fadeIn {
+		from { opacity: 0; }
+		to { opacity: 1; }
+	}
+	p {
+  font-size: 34px;
+  color: grey;
+}
+i {
+  font-size: 34px;
+  color: grey;
+  font-family: "Scheherazade New";
+}
+b {
+  font-size: 15px;
+  color: grey;
+  text-align:end;
+}
+	.sidebar {
+		height: 100%;
+		width: 200x;
+		position: fixed;
+		top: 0;
+		left: -400px;
+		background-image: linear-gradient(black, rgb(74, 5, 5));
+		overflow-x: hidden;
+		transition: left 0.3s;
+		padding: 20px;
+	}
+	.sidebar a {
+		display: block;
+		padding: 10px;
+		text-decoration: none;
+		color: grey;
+	}
+	.sidebar h2 {
+		display: block;
+		padding: 10px;
+		text-decoration: none;
+		color: grey;
+	}
+	.sidebar a:hover, .sidebar h2:hover {
+		color:brown;
+	}
+
+	.toggle-btn {
+		position: fixed;
+		left: 20px;
+		top: 20px;
+		background: grey;
+		border: none;
+		padding: 10px;
+		cursor: pointer;
+		z-index: 1000;
+	}
+	@media (max-width: 768px) {
+		.sidebar {
+			width: 200px;
+		}
+	}
+</style>
+</head>
+<body>
+<button class="toggle-btn" onclick="toggleSidebar()">:3</button>
+<div class="sidebar" id="sidebar">
+	<h2> <a href="index.html">Main menu</a></h2>
+	<h2> <a href="2.html">Images</a></h2>
+	<h2> <a href="3.html">Videos</a></h2>
+	<h2> <a href="4.html">Things I made</a></h2>
+	<h2> <a href="ZZ4.html">ٻًضعَّ ڳّْکنّڳُ يِٻعَصَ شنُکؕ</a></h2>
+</div>
+
+<script>
+	function toggleSidebar() {
+		const sidebar = document.getElementById('sidebar');
+		if (sidebar.style.left === '0px') {
+			sidebar.style.left = '-350px';
+		} else {
+			sidebar.style.left = '0px';
+		}
+	}
+</script>
   <p><b>This has no particular order</b></p>
-  <p><a href="1.html"><i>Go back?</i></a></p>
   <audio src="songs/PartyIsntOver.mp3" autoplay loop></audio>
   <div class="image-grid">
 	<div class="image-item">

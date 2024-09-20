@@ -3,8 +3,72 @@
 	<title>کعَّشنعِمَّ شَ کعْگِڱّ</title>
 	<b> PartyIsntOver (Instrumental) · Tyler, The Creator :ݜعِشخّڱً</b>
   </head>
+  <style>
+	.sidebar {
+		height: 100%;
+		width: 200x;
+		position: fixed;
+		top: 0;
+		left: -425px;
+		background-image: linear-gradient(black, rgb(74, 5, 5));
+		overflow-x: hidden;
+		transition: left 0.3s;
+		padding: 20px;
+	}
+	.sidebar a {
+		display: block;
+		padding: 10px;
+		text-decoration: none;
+		color: grey;
+	}
+	.sidebar h2 {
+		display: block;
+		padding: 10px;
+		text-decoration: none;
+		color: grey;
+	}
+	.sidebar a:hover, .sidebar h2:hover {
+		color:brown;
+	}
+	
+	.toggle-btn {
+		position: fixed;
+		left: 20px;
+		top: 20px;
+		background: grey;
+		border: none;
+		padding: 10px;
+		cursor: pointer;
+		z-index: 1000;
+	}
+	@media (max-width: 768px) {
+		.sidebar {
+			width: 200px;
+		}
+	}
+	</style>
+	</head>
+	<body>
+	<button class="toggle-btn" onclick="toggleSidebar()">:3</button>
+	<div class="sidebar" id="sidebar">
+	<h2> <a href="ZZindex.html">ݜُکعُ ݜّضعَ</a></h2>
+	<h2> <a href="ZZ2.html">حؕىَّتىَمَّ</a></h2>
+	<h2> <a href="ZZ3.html">ٻعَبًىًمَّ</a></h2>
+	<h2> <a href="ZZ4.html">کعَّشنعِمَّ شَ کعْگِڱّ</a></h2>
+	<h2> <a href="4.html">Change language to english</a></h2>
+	</div>
+	
+	<script>
+	function toggleSidebar() {
+		const sidebar = document.getElementById('sidebar');
+		if (sidebar.style.left === '0px') {
+			sidebar.style.left = '-450px';
+		} else {
+			sidebar.style.left = '0px';
+		}
+	}
+	</script>
   <p><b>کؕۑعِ ىّڱَّضَ شخعْکنُ ۑعِݜعْصَ شِۑعُ</b></p>
-  <p><a href="1.html"><i>ىِمعُپُ تًبَ؟</i></a></p>
   <audio src="songs/PartyIsntOver.mp3" autoplay loop></audio>
   <div class="image-grid">
 	<div class="image-item">

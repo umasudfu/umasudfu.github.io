@@ -1,10 +1,84 @@
 <meta charset="UTF-8">
 <head>
   <title>ٻعَبًىًمَّ</title>
-  <b>Lone, Tyler · The Creator :ݜعِشخّڱً</b>
+  <h1><b>Lone, Tyler · The Creator :ݜعِشخّڱً</b></h1>
 </head>
+<style>
+  .sidebar {
+    height: 100%;
+    width: 200x;
+    position: fixed;
+    top: 0;
+    left: -425px;
+    background-image: linear-gradient(black, rgb(74, 5, 5));
+    overflow-x: hidden;
+    transition: left 0.3s;
+    padding: 20px;
+  }
+  .sidebar a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: grey;
+  }
+  .sidebar h2 {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: grey;
+  }
+  .sidebar a:hover, .sidebar h2:hover {
+    color:brown;
+  }
+  
+  .toggle-btn {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    background: grey;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 200px;
+    }
+  }
+	.sidebar-open video::-webkit-media-controls {
+    display: none !important;
+	}
+
+.sidebar-open video::media-controls {
+    display: none !important;
+}
+  </style>
+  </head>
+  <body>
+  <button class="toggle-btn" onclick="toggleSidebar()">:3</button>
+  <div class="sidebar" id="sidebar">
+  <h2> <a href="ZZindex.html">ݜُکعُ ݜّضعَ</a></h2>
+  <h2> <a href="ZZ2.html">حؕىَّتىَمَّ</a></h2>
+  <h2> <a href="ZZ3.html">ٻعَبًىًمَّ</a></h2>
+  <h2> <a href="ZZ4.html">کعَّشنعِمَّ شَ کعْگِڱّ</a></h2>
+  <h2> <a href="3.html">Change language to english</a></h2>
+  </div>
+  
+  <script>
+	function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    const body = document.body;
+    if (sidebar.style.left === '0px') {
+        sidebar.style.left = '-350px';
+        body.classList.remove('sidebar-open');
+    } else {
+        sidebar.style.left = '0px';
+        body.classList.add('sidebar-open');
+    }
+  }
+  </script>
 <body>
-  <p><a href="ZZ1.html"><i>ىِمعُپُ تًبَ؟</i></a></p>
   <audio src="songs/Lone.mp3" autoplay loop></audio>
   <video src="videos/32ca132fb190d789cebf6dc1044fd36b-Xuk4b5.mov" width="300" height="300" controls></video>
   <video src="videos/7284877533248523525_no_watermark.mp4.mov" width="300" height="300" controls></video>
