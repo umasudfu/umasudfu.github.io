@@ -37,7 +37,7 @@
         }
         .sidebar {
             height: 100%;
-            width: 200px; /* Fixed width */
+            width: 200px;
             position: fixed;
             top: 0;
             left: -400px;
@@ -61,7 +61,6 @@
         .sidebar a:hover, .sidebar h2:hover {
             color: brown;
         }
-
         .toggle-btn {
             position: fixed;
             left: 20px;
@@ -91,26 +90,19 @@
     <script>
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
-            if (sidebar.style.left === '0px') {
-                sidebar.style.left = '-350px';
-            } else {
-                sidebar.style.left = '0px';
-            }
+            sidebar.style.left = (sidebar.style.left === '0px') ? '-350px' : '0px';
         }
 
-        // Randomly choose the image to display
-        const randomNum = Math.random();
-        const imgSrc = randomNum < 0.05 ? 'Loadingscreen_images/ezgif-2-c359a4cffb.gif' : 'images/zuka-phighting-rocket-phighting.gif';
-        document.addEventListener("DOMContentLoaded", function() {
-            const imgElement = document.createElement('img');
-            imgElement.src = imgSrc;
-            imgElement.width = 500;
-            imgElement.height = 500;
-            document.body.appendChild(imgElement);
-        });
+        // Randomly select the image source
+        window.onload = function() {
+            const randomNum = Math.random();
+            const imageSrc = randomNum < 0.1 ? 'Loadingscreen_images/ezgif-2-c359a4cffb.gif' : 'images/zuka-phighting-rocket-phighting.gif';
+            document.getElementById('randomImage').src = imageSrc;
+        };
     </script>
 
     <p><i>⚠️Silly goober alert⚠️</i></p>
+    <img id="randomImage" src="images/zuka-phighting-rocket-phighting.gif" width="500" height="500">
     <p><i>Hi there!ヾ(≧▽≦*)o</i></p>
     <p><i>I'm just going to put some random memes and videos I stole from Discord.</i></p>
     <p><i>I just felt like making some website for fun (^人^)</i></p>
