@@ -76,6 +76,14 @@
                 width: 200px;
             }
         }
+        /* Aspect ratio styles */
+        #randomImage {
+            width: 500px; /* Default width */
+        }
+        .aspect-4-3 {
+            height: 375px; /* 4:3 aspect ratio for 500px width */
+            object-fit: cover; /* Maintain aspect ratio and cover the space */
+        }
     </style>
 </head>
 <body>
@@ -96,8 +104,13 @@
         // Randomly select the image source
         window.onload = function() {
             const randomNum = Math.random();
-            const imageSrc = randomNum < 0.1 ? 'Loadingscreen_images/ezgif-2-c359a4cffb.gif' : 'images/zuka-phighting-rocket-phighting.gif';
-            document.getElementById('randomImage').src = imageSrc;
+            const imageSrc = randomNum < 0.05 ? 'Loadingscreen_images/ezgif-2-c359a4cffb.gif' : 'images/zuka-phighting-rocket-phighting.gif';
+            const imageElement = document.getElementById('randomImage');
+            imageElement.src = imageSrc;
+            // Add class for 4:3 aspect ratio if needed
+            if (imageSrc.includes('ezgif-2-c359a4cffb.gif')) {
+                imageElement.classList.add('aspect-4-3');
+            }
         };
     </script>
 
