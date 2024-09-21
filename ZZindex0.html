@@ -79,6 +79,13 @@
                 width: 200px;
             }
         }
+        #randomImage {
+            width: 500px;
+        }
+        .size {
+            height: 500;
+            object-fit: cover;
+        }
     </style>
 </head>
 <body>
@@ -100,9 +107,24 @@
             }
         }
     </script>
-
+        <script>
+            function toggleSidebar() {
+                const sidebar = document.getElementById('sidebar');
+                sidebar.style.left = (sidebar.style.left === '0px') ? '-350px' : '0px';
+            }
+    
+            window.onload = function() {
+                const randomNum = Math.random();
+                const imageSrc = randomNum < 0.2 ? 'GYAAAATTT!.gif' : 'images/zuka-phighting-rocket-phighting.gif';
+                const imageElement = document.getElementById('randomImage');
+                imageElement.src = imageSrc;
+                if (imageSrc.includes('GYAAAATTT!.gif')) {
+                    imageElement.classList.add('size');
+                }
+            };
+        </script>
     <p><i>⚠️سعُۑّْ سعَّپِتىعَّ سعُگْتىؕ⚠️</i></p>
-    <img src="images/zuka-phighting-rocket-phighting.gif" width="500" height="500">
+    <img id="randomImage" src="images/zuka-phighting-rocket-phighting.gif" width="500" height="500">
     <p><i>ヾ(≧▽≦*)o نعُکّتخَ ٺًخْ</i></p>
     <p><i>Discord شَ مع ںًتخعُ شنّٺّىّ ىِمعُپُ تىؕۑعَٻُ تخعَٻعْتِ گعِضعِ شنعْںَتعَمَّ/ٻعَبًىًمَّ شَ کنعُحِتىعُڱّ ںؕپَ</i></p>
     <p><i>(^人^) شَ شنّٺّىّ کَّکنَّݜؕڱّ يؕثؕ کعْگِ تخعَٻعْتِ ثْخً ىعَشعَکعِ</i></p></i></p>

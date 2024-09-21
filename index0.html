@@ -76,13 +76,12 @@
                 width: 200px;
             }
         }
-        /* Aspect ratio styles */
         #randomImage {
-            width: 500px; /* Default width */
+            width: 500px;
         }
-        .aspect-4-3 {
-            height: 375px; /* 4:3 aspect ratio for 500px width */
-            object-fit: cover; /* Maintain aspect ratio and cover the space */
+        .size {
+            height: 500;
+            object-fit: cover;
         }
     </style>
 </head>
@@ -101,15 +100,13 @@
             sidebar.style.left = (sidebar.style.left === '0px') ? '-350px' : '0px';
         }
 
-        // Randomly select the image source
         window.onload = function() {
             const randomNum = Math.random();
-            const imageSrc = randomNum < 0.05 ? 'Loadingscreen_images/ezgif-2-c359a4cffb.gif' : 'images/zuka-phighting-rocket-phighting.gif';
+            const imageSrc = randomNum < 0.2 ? 'GYAAAATTT!.gif' : 'images/zuka-phighting-rocket-phighting.gif';
             const imageElement = document.getElementById('randomImage');
             imageElement.src = imageSrc;
-            // Add class for 4:3 aspect ratio if needed
-            if (imageSrc.includes('ezgif-2-c359a4cffb.gif')) {
-                imageElement.classList.add('aspect-4-3');
+            if (imageSrc.includes('GYAAAATTT!.gif')) {
+                imageElement.classList.add('size');
             }
         };
     </script>
