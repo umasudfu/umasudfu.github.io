@@ -25,7 +25,7 @@ folder_path = r'C:\Users\rayde\Downloads\umasudfu\imgs'
 image_files = list_image_files(folder_path)
 
 # Define the path for the output TXT file
-txt_file_path = 'imgs i made.txt'
+txt_file_path = ':3.txt'
 
 # Write the formatted list to a TXT file
 with open(txt_file_path, 'w') as txt_file:
